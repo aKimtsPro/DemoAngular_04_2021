@@ -1,0 +1,20 @@
+<h2>Le binding</h2>
+
+<p>il existe 2 types de binding</p>
+
+<dl>
+    <dt>One-Way</dt>
+    <dd>Utilisation d'info de la classe dans le template</dd>
+    <dt>Two-Way</dt>
+    <dd>Utilisation et modification d'infos de la classe dans le template</dd>
+</dl>
+
+<h3>binding One-Way</h3>
+
+<p>J'affiche l'age de l'utilisateur défini dans la classe : {{ age + 5 }} ans </p>
+<p [class]="classe" >Je donne à cet élément une classe(css) particulère défini dans la classe(ts) via binding d'atribut</p>
+
+<h3>binding Two-Way</h3>
+
+<label for="input-age">Quel est votre âge ?</label><br>
+<input id="input-age" type="number" [(ngModel)]="age">
