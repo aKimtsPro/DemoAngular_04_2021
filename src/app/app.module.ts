@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { BindingComponent } from './binding/binding.component';
 import { FormsModule } from '@angular/forms';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AccueilComponent,
-    BindingComponent
+    BindingComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,

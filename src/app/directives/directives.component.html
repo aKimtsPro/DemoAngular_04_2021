@@ -1,0 +1,53 @@
+<h2>Les directives</h2>
+
+<p>3 types de directives : </p>
+<ul>
+    <li>component : les components</li>
+    <li>[attribute] : attributs permettant de modifier l'apparence d'un élément de manière dynamique</li>
+    <li>*structural : attributs permettant de manipuler le DOM de manière dynamique</li>
+</ul>
+
+<h3>Attribute directive</h3>
+
+<label for="input-nbr">Entrez un nombre</label>
+<input id="input-nbr" type="number" [(ngModel)]='nbr'>
+
+<p>  <span [ngClass]="{ red: nbr >= 0, underlined: nbr < 10 }"> ngClass </span> est une directive permettant d'associer une ou plusieurs classes CSS selon une condition</p>
+<p>  <span [ngStyle]="{ 'font-size': nbr+'px', border: nbr+'px solid black' }"> ngStyle </span> permet de définir dynamique la valeurs de propriétés CSS </p>
+<p>  <span [style.font-size]="nbr+'px'"> style.propriétéCSS </span> permet de donner une valeur à une propriété CSS unique dynamiquement</p>
+
+<h3>Structural directives</h3>
+
+<div>
+    <h4>*ngIf</h4>
+    <p> *ngIf permet de définir la présence d'un élément selon une condition évaluée dynamiquement </p>
+    
+    <p>*ngIf</p>
+    <p *ngIf="nbr >= 0">Le nombre est positif</p>
+    <p *ngIf="nbr < 0">Le nombre est négatif</p>
+
+    <p>hidden</p>
+    <p [hidden]="nbr < 0">Le nombre est positif</p>
+    <p [hidden]="nbr >= 0">Le nombre est négatif</p>
+</div>
+
+<div>
+    <h4>*ngFor</h4>
+    <p> *ngFor permet de répeter un élément pour chaque item d'un tableau </p>
+
+    <ul>
+        <li *ngFor="let name of names">{{ name }}</li>
+    </ul>
+</div>
+
+
+<div>
+    <h3>Les événements</h3>
+
+    <input type="text" placeholder="nom à ajouter" [(ngModel)]="toAdd" (blur)="onBlur($event)">
+    <button (click)="addName($event)">ajouter</button>
+</div>
+
+
+
+
