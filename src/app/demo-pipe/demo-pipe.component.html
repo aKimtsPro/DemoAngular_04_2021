@@ -1,0 +1,25 @@
+<h5>Le pipe DatePipe</h5>
+<p>{{ currentDate | date:'HH:mm:ss, dd MMMM y' }}</p>
+
+<h5>Le pipe CurrencyPipe</h5>
+<p>{{ argent | currency:'EUR':'code':'4.2-2' }}</p>
+
+<h5>Custom pipe : PersonPipe</h5>
+<p>{{ person | person }}</p>
+<p>Je m'appelle {{person.nom}} et j'ai {{person.age}}ans</p>
+
+<h5>JsonPipe</h5>
+
+<p>{{ person | json }}</p>
+
+<h5>SlicePipe</h5>
+
+<p>{{ "salut ca marche?" | slice:0:8 }}</p>
+<ul>
+    <li *ngFor="let name of ( nameList | slice:0:3 )">{{name}}</li>
+</ul>
+
+
+<h5>Les pipes peuvent se chainer</h5>
+
+<p>{{ person | json | slice:0:15 }}</p>

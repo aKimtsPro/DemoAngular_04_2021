@@ -12,6 +12,8 @@ import { NavComponent } from './nav/nav.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ParityComponent } from './parity/parity.component';
 import { RedirectionComponent } from './redirection/redirection.component';
+import { DemoPipeComponent } from './demo-pipe/demo-pipe.component';
+import { PersonPipe } from './pipes/person.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { RedirectionComponent } from './redirection/redirection.component';
     NavComponent,
     NotFoundComponent,
     ParityComponent,
-    RedirectionComponent
+    RedirectionComponent,
+    DemoPipeComponent,
+    PersonPipe
   ],
   imports: [
     BrowserModule,

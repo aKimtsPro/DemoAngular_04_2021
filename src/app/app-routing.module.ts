@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AccueilComponent } from './accueil/accueil.component';
 import { BindingComponent } from './binding/binding.component';
+import { DemoPipeComponent } from './demo-pipe/demo-pipe.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { DemoGuard } from './guard/demo.guard';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'directive', component: DirectivesComponent },
   { path: 'parity/:nbr', component: ParityComponent, canActivate: [ DemoGuard ] },
   { path: 'redir', component: RedirectionComponent },
+  { path: 'pipe', component: DemoPipeComponent },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '404' }
 ];
