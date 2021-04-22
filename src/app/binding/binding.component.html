@@ -3,7 +3,7 @@
 <p>il existe 2 types de binding</p>
 
 <dl>
-    <dt>One-Way</dt>
+    <dt appHighlight>One-Way</dt>
     <dd>Utilisation d'info de la classe dans le template</dd>
     <dt>Two-Way</dt>
     <dd>Utilisation et modification d'infos de la classe dans le template</dd>
@@ -16,5 +16,5 @@
 
 <h3>binding Two-Way</h3>
 
-<label for="input-age">Quel est votre âge ?</label><br>
+<label for="input-age" appHighlight>Quel est votre âge ?</label><br>
 <input id="input-age" type="number" [(ngModel)]="age">
