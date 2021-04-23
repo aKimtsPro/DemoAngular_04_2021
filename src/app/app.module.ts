@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { BindingComponent } from './binding/binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { HighlightDirective } from './directives/custom/highlight.directive';
 import { NavComponent } from './nav/nav.component';
@@ -17,6 +17,7 @@ import { PersonPipe } from './pipes/person.pipe';
 import { CommunicationComponent } from './communication/communication.component';
 import { Child1Component } from './communication/child1/child1.component';
 import { Child2Component } from './communication/child2/child2.component';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -33,12 +34,14 @@ import { Child2Component } from './communication/child2/child2.component';
     PersonPipe,
     CommunicationComponent,
     Child1Component,
-    Child2Component
+    Child2Component,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

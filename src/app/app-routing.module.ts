@@ -5,6 +5,7 @@ import { BindingComponent } from './binding/binding.component';
 import { CommunicationComponent } from './communication/communication.component';
 import { DemoPipeComponent } from './demo-pipe/demo-pipe.component';
 import { DirectivesComponent } from './directives/directives.component';
+import { FormsComponent } from './forms/forms.component';
 import { DemoGuard } from './guard/demo.guard';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ParityComponent } from './parity/parity.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'redir', component: RedirectionComponent },
   { path: 'pipe', component: DemoPipeComponent },
   { path: 'com', component: CommunicationComponent },
+  { path: 'forms', component: FormsComponent },
   { path: '404', component: NotFoundComponent },
   { path: '**', redirectTo: '404' }
 ];
