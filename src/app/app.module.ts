@@ -14,6 +14,9 @@ import { ParityComponent } from './parity/parity.component';
 import { RedirectionComponent } from './redirection/redirection.component';
 import { DemoPipeComponent } from './demo-pipe/demo-pipe.component';
 import { PersonPipe } from './pipes/person.pipe';
+import { CommunicationComponent } from './communication/communication.component';
+import { Child1Component } from './communication/child1/child1.component';
+import { Child2Component } from './communication/child2/child2.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { PersonPipe } from './pipes/person.pipe';
     ParityComponent,
     RedirectionComponent,
     DemoPipeComponent,
-    PersonPipe
+    PersonPipe,
+    CommunicationComponent,
+    Child1Component,
+    Child2Component
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,17 @@
+
+<h2> La communication Parent/Enfant </h2>
+
+<label for="input-com">Message à envoyer</label>
+<br>
+<input type="text" id="input-com" [(ngModel)]="inputValue">
+
+<app-child1 [in]="inputValue"></app-child1>
+
+<app-child2 (out)="onAdd($event)"></app-child2>
+
+<h4>Liste de nom:</h4>
+
+<p *ngIf="listNom.length == 0">La liste est vide</p>
+<ul>
+    <li *ngFor="let nom of listNom">{{ nom }}</li>
+</ul>

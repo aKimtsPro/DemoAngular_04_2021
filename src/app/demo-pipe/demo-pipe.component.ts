@@ -24,10 +24,13 @@ export class DemoPipeComponent implements OnInit {
     'louise'
   ]
 
-  constructor() { }
+  constructor() {
+
+  }
 
   ngOnInit(): void {
     setInterval(() => this.currentDate = new Date(), 1000);
+    console.log( this.nameList.filter((element) => element.charAt(0) == 'l') );
   }
 
 }
