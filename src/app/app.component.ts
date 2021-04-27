@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NumberService } from './services/number.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Demo Angular';
+  nbr;
+
+  constructor (private service: NumberService){
+
+    service.onNbrChanged.subscribe( ( value ) => this.nbr = value );
+
+  }
 }

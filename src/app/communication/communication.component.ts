@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NumberService } from '../services/number.service';
 
 @Component({
   selector: 'app-communication',
@@ -10,7 +11,7 @@ export class CommunicationComponent implements OnInit {
   inputValue: string;
   listNom: string[] = [];
 
-  constructor() { }
+  constructor(private service: NumberService) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +20,10 @@ export class CommunicationComponent implements OnInit {
 
     console.log(toAdd);
     this.listNom.push(toAdd);
+  }
+
+  dec(){
+    this.service.decrement();
   }
 
 }

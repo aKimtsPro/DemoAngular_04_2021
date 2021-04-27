@@ -36,7 +36,7 @@
     <p> *ngFor permet de répeter un élément pour chaque item d'un tableau </p>
 
     <ul>
-        <li *ngFor="let name of names">{{ name }}</li>
+        <li *ngFor="let name of names; let i = index">{{ i }} - {{ name }}</li>
     </ul>
 </div>
 
