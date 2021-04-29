@@ -1,5 +1,8 @@
 <header>
-    <h1 class="red"> {{ title }} </h1>
+    <div id="title-holder">
+        <h1 class="red"> {{ title }} </h1>
+        <button *ngIf="isLogged()" (click)="logout()">se déconnecter</button>
+    </div>
     <h2>mon nombre est : {{ nbr }}</h2>
 </header>
 

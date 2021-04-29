@@ -1,5 +1,6 @@
 <h2 class="red" appHighlight>Accueil</h2>
 
-<p>Bienvenue dans cette demo d'angular</p>
+
+<p>Bienvenue dans cette demo d'angular  <span *ngIf="isLogged()">{{ getUserInfo().username }}</span> </p>
 
 <button (click)="inc()">increment le nombre</button>

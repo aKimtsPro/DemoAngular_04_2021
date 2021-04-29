@@ -20,4 +20,10 @@
     <div>
         <a routerLink="/forms">forms</a>
     </div>
+    <div *ngIf="isLogged()">
+        <a routerLink="/http">requete</a>
+    </div>
+    <div>
+        <a routerLink="/login">login</a>
+    </div>
 </nav>

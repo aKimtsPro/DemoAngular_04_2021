@@ -18,6 +18,9 @@ import { CommunicationComponent } from './communication/communication.component'
 import { Child1Component } from './communication/child1/child1.component';
 import { Child2Component } from './communication/child2/child2.component';
 import { FormsComponent } from './forms/forms.component';
+import { RequeteComponent } from './requete/requete.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -35,13 +38,16 @@ import { FormsComponent } from './forms/forms.component';
     CommunicationComponent,
     Child1Component,
     Child2Component,
-    FormsComponent
+    FormsComponent,
+    RequeteComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

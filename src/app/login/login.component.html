@@ -1,0 +1,16 @@
+
+<h2>Formulaire de connexion</h2>
+
+<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+    <div>
+        <label for="">username</label><br>
+        <input type="text" formControlName="username">
+    </div>
+    <div>
+        <label for="">password</label><br>
+        <input type="password" formControlName="password">
+    </div>
+    <button type="submit">se connecter</button>
+
+</form>

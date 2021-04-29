@@ -1,0 +1,49 @@
+
+<h3>Les requetes HTTP</h3>
+
+
+<h4>Le GET</h4>
+<button (click)="onLoad()">charger/recharger les taches</button>
+
+<table>
+    <thead>
+        <th>userId</th>
+        <th>id</th>
+        <th>title</th>
+        <th>completed</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let todo of todos">
+            <td>{{ todo.userId }}</td>
+            <td>{{ todo.id }}</td>
+            <td>{{ todo.title }}</td>
+            <td>{{ todo.completed }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>Le POST</h4>
+
+<form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="user-id-input">user id</label><br>
+        <input type="number" formControlName="userId">
+    </div>
+    <div>
+        <label for="title-input">title</label><br>
+        <input type="text" formControlName="title">
+    </div>
+    <div>
+        <label for="completed-input">completed</label>
+        <input type="checkbox" formControlName="completed">
+    </div>
+
+    <button type="submit">envoyer</button>
+</form>
+
+<div *ngIf="lastSentTodo != null">
+    <p><span>userID : </span> {{ lastSentTodo.userId }}</p>
+    <p><span>id : </span> {{ lastSentTodo.id }}</p>
+    <p><span>title : </span> {{ lastSentTodo.title }}</p>
+    <p><span>completed : </span> {{ lastSentTodo.completed }}</p>
+</div>
